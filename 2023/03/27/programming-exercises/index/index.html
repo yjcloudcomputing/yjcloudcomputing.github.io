@@ -350,6 +350,14 @@
             <!-- SEO header -->
             <h1 style="display: none">programming_exercises</h1>
             
+              <p class="note note-info">
+                
+                  
+                    Last updated on March 27, 2023 pm
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -469,6 +477,11 @@
         </div>
       
       
+        <div class="license-meta-item license-meta-date">
+          <div>Updated on</div>
+          <div>March 27, 2023</div>
+        </div>
+      
       
         <div class="license-meta-item">
           <div>Licensed under</div>
@@ -517,6 +530,28 @@
   
     <article id="comments" lazyload>
       
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"PP10hnWAjmUcAiSxYWLvBFLj-gzGzoHsz","appKey":"2tHsCP3LBGdhHO4HANdhmUKb","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":"fa","recordIP":true,"serverURLs":"https://pp10hnwa.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
