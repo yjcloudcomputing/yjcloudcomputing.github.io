@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20190927/334190970_1569553063234_679E3E040A93A984AB3426E27BFF2899">
 <meta property="og:image" content="http://example.com/img/python_2.png">
 <meta property="article:published_time" content="2023-03-22T10:54:33.000Z">
-<meta property="article:modified_time" content="2023-04-06T05:29:05.459Z">
+<meta property="article:modified_time" content="2023-04-19T02:33:51.218Z">
 <meta property="article:author" content="YJ">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,7 +296,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          26k words
+          31k words
         
       </span>
     
@@ -307,7 +307,7 @@
         
         
         
-          221 mins
+          259 mins
         
       </span>
     
@@ -358,7 +358,7 @@
               <p class="note note-info">
                 
                   
-                    Last updated on April 6, 2023 pm
+                    Last updated on April 19, 2023 am
                   
                 
               </p>
@@ -1054,7 +1054,114 @@
 
 <h5 id="2、实训任务2：使用集合实现筛选法求素数"><a href="#2、实训任务2：使用集合实现筛选法求素数" class="headerlink" title="2、实训任务2：使用集合实现筛选法求素数"></a><strong><font color="blue">2、实训任务2：使用集合实现筛选法求素数</font></strong></h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">实验目的：<br><span class="hljs-number">1</span>、理解求解素数的筛选法原理。<br><span class="hljs-number">2</span>、理解 Python 集合对象的 discard()方法。<br><span class="hljs-number">3</span>、熟练运用列表推导式。<br><span class="hljs-number">4</span>、理解 <span class="hljs-keyword">for</span> 循环工作原理。<br>实验内容：<br>输入一个大于 <span class="hljs-number">2</span> 的自然数，输出小于该数字的所有素数组成的集合。<br></code></pre></td></tr></table></figure>
 
-<h3 id="（四）字符串"><a href="#（四）字符串" class="headerlink" title="（四）字符串"></a>（四）字符串</h3><h4 id="（1）字符串"><a href="#（1）字符串" class="headerlink" title="（1）字符串"></a><strong><font color="red">（1）字符串</font></strong></h4><h5 id="1、字符串"><a href="#1、字符串" class="headerlink" title="1、字符串"></a><strong><font color="blue">1、字符串</font></strong></h5><h3 id="（五）正则表达式"><a href="#（五）正则表达式" class="headerlink" title="（五）正则表达式"></a>（五）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h5 id="1、正则表达式"><a href="#1、正则表达式" class="headerlink" title="1、正则表达式"></a><strong><font color="blue">1、正则表达式</font></strong></h5>
+<h3 id="（四）函数"><a href="#（四）函数" class="headerlink" title="（四）函数"></a>（四）函数</h3><h4 id="（1）函数的定义与使用"><a href="#（1）函数的定义与使用" class="headerlink" title="（1）函数的定义与使用"></a><strong><font color="red">（1）函数的定义与使用</font></strong></h4><h5 id="1、基本语法"><a href="#1、基本语法" class="headerlink" title="1、基本语法"></a><strong><font color="blue">1、基本语法</font></strong></h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">函数名</span>(<span class="hljs-params">[参数列表]</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;注释&#x27;&#x27;&#x27;</span><br>    函数体<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意事项</p>
+<ol>
+<li>函数形参不需要声明类型，也不需要指定函数返回值类型</li>
+<li>即使该函数不需要接收任何参数，也必须保留一对空的圆括号</li>
+<li>括号后面的冒号必不可少</li>
+<li>函数体相对于def关键字必须保持一定的空格缩进</li>
+<li>Python允许嵌套定义函数</li>
+</ol>
+</blockquote>
+<p><strong>:案例1：编写函数，计算并输出生成斐波那契数列中所有小于参数n的所有值，并调用该函数进行测试</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">n</span>):<br>    a,b=<span class="hljs-number">1</span>,<span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> a&lt;n:<br>        <span class="hljs-built_in">print</span>(a,end=<span class="hljs-string">&#x27; &#x27;</span>)<br>        a,b=b,a+b<br>fib(<span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
+
+<h5 id="2、递归函数"><a href="#2、递归函数" class="headerlink" title="2、递归函数"></a><strong><font color="blue">2、递归函数</font></strong></h5><blockquote>
+<p>​       函数递归通常用来把一个大型的复杂问题层层转化为一个与原来问题本质相同但规模很小、很容易解决或描述的问题，只需要很少的代码就可以描述解决问题过程中需要的大量重复计算。在编写递归函数时，应注意以下几点。</p>
+<ol>
+<li>每次递归应保持问题性质不变。</li>
+<li>每次递归应使用更小或更简单的输入。</li>
+<li>必须有一个能够直接处理而不需要再次进行递归的特殊情况来保证递归过程可以结束。</li>
+<li>函数递归深度不能太大，否则会导致内存崩溃。</li>
+</ol>
+</blockquote>
+<p><strong>案例2：编写函数，使用递归法对整数进行因数分解。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">factors</span>(<span class="hljs-params">num</span>):<br>    <span class="hljs-comment"># 每次都从2开始查找因数</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-built_in">int</span>(num**<span class="hljs-number">0.5</span>)+<span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># 找到一个因数</span><br>        <span class="hljs-keyword">if</span> num%i == <span class="hljs-number">0</span>:<br>            facs.append(i)<br>            <span class="hljs-comment"># 对商继续分解，重复这个过程</span><br>            factors(num//i)<br>            <span class="hljs-comment"># 注意，这个break非常重要</span><br>            <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-comment"># 不可分解了，自身也是个因数</span><br>        facs.append(num)<br>facs = []<br>n = randint(<span class="hljs-number">2</span>, <span class="hljs-number">10</span>**<span class="hljs-number">8</span>)<br>factors(n)<br>result = <span class="hljs-string">&#x27;*&#x27;</span>.join(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">str</span>, facs))<br><span class="hljs-keyword">if</span> n == <span class="hljs-built_in">eval</span>(result):<br>    <span class="hljs-built_in">print</span>(n, <span class="hljs-string">&#x27;= &#x27;</span>+result)<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="（2）函数参数"><a href="#（2）函数参数" class="headerlink" title="（2）函数参数"></a><strong><font color="red">（2）函数参数</font></strong></h4><h5 id="1、位置参数"><a href="#1、位置参数" class="headerlink" title="1、位置参数"></a><strong><font color="blue">1、位置参数</font></strong></h5><blockquote>
+<p>​       位置参数（positional arguments）是比较常用的形式，调用函数时实参和形参的==顺序必须严格一致==，并且实参和形参的数量必须相同。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">a, b, c</span>):<br>    <span class="hljs-built_in">print</span>(a, b, c)<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>demo(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)                   <span class="hljs-comment"># 按位置传递参数</span><br><span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>demo(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>)<br><span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>demo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)                <span class="hljs-comment"># 实参与形参数量必须相同</span><br>TypeError: demo() takes <span class="hljs-number">3</span> positional arguments but <span class="hljs-number">4</span> were given<br><br></code></pre></td></tr></table></figure>
+
+<p><strong><font color="blue">2、默认值参数</font></strong></p>
+<blockquote>
+<p>•在调用函数时，可以不用为设置了默认值的形参传递实参，此时函数将会直接使用函数定义时设置的默认值，当然也可以通过显式赋值来替换其默认值。在调用函数时是否为默认值参数传递实参是可选的。</p>
+<p>•需要注意的是，在定义带有默认值参数的函数时，任何一个默认值参数右边都不能再出现没有默认值的普通位置参数，否则会提示语法错误。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say</span>(<span class="hljs-params">message, times=<span class="hljs-number">1</span></span>):<br>    <span class="hljs-built_in">print</span>((message + <span class="hljs-string">&#x27; &#x27;</span>) * times)<br>    <br>say(<span class="hljs-string">&quot;hello&quot;</span>)    <span class="hljs-comment"># hello</span><br>say(<span class="hljs-string">&quot;hello&quot;</span>,<span class="hljs-number">3</span>)  <span class="hljs-comment"># hello hello hello</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="3、关键参数"><a href="#3、关键参数" class="headerlink" title="3、关键参数"></a><strong><font color="blue">3、关键参数</font></strong></h5><blockquote>
+<p>​       通过关键参数可以按参数名字传递实参，明确指定哪个实参传递给哪个形参，<strong>实参顺序可以和形参顺序不一致</strong>，但不影响参数值的传递结果，避免了用户需要牢记参数位置和顺序的麻烦，使得函数的调用和参数传递更加灵活方便</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">a, b, c=<span class="hljs-number">5</span></span>):<br>    <span class="hljs-built_in">print</span>(a, b, c)<br>demo(<span class="hljs-number">3</span>, <span class="hljs-number">7</span>)  <span class="hljs-comment"># 3 7 5</span><br>demo(a=<span class="hljs-number">7</span>, b=<span class="hljs-number">3</span>, c=<span class="hljs-number">6</span>)  <span class="hljs-comment"># 7 3 6</span><br>demo(c=<span class="hljs-number">8</span>, a=<span class="hljs-number">9</span>, b=<span class="hljs-number">0</span>)  <span class="hljs-comment"># 9 0 8</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="4、不定长参数"><a href="#4、不定长参数" class="headerlink" title="4、不定长参数"></a><strong><font color="blue">4、不定长参数</font></strong></h5><blockquote>
+<p>不定长度参数主要有两种形式：在参数名前加1个<em>或2个</em>*</p>
+<p>*parameter用来接收多个位置参数并将其放在元组中</p>
+<p>**parameter用来接收多个关键参数并将其放在字典中</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">*p</span>):<br>    <span class="hljs-built_in">print</span>(p)<br>demo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)  <span class="hljs-comment"># (1, 2, 3)</span><br>demo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)  <span class="hljs-comment"># (1, 2)</span><br>demo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>)  <span class="hljs-comment"># (1, 2, 3, 4, 5, 6, 7)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">**p</span>):<br>    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> p.items():<br>        <span class="hljs-built_in">print</span>(item)<br><br>demo(x=<span class="hljs-number">1</span>, y=<span class="hljs-number">2</span>, z=<span class="hljs-number">3</span>)<br><span class="hljs-comment"># (&#x27;x&#x27;, 1)</span><br><span class="hljs-comment"># (&#x27;y&#x27;, 2)</span><br><span class="hljs-comment"># (&#x27;z&#x27;, 3)</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="5、传递参数时的序列解包"><a href="#5、传递参数时的序列解包" class="headerlink" title="5、传递参数时的序列解包"></a><strong><font color="blue">5、传递参数时的序列解包</font></strong></h5><blockquote>
+<p>传递参数时，可以通过在实参序列前加一个星号将其解包为普通位置参数，然后传递给多个单变量形参。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">a, b, c</span>):<br>    <span class="hljs-built_in">print</span>(a + b + c)<br><br><br>seq = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br>demo(*seq)  <span class="hljs-comment"># 6</span><br><br>tup = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)<br>demo(*tup)  <span class="hljs-comment"># 6</span><br><br>dic = &#123;<span class="hljs-number">1</span>: <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-number">2</span>: <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-number">3</span>: <span class="hljs-string">&#x27;c&#x27;</span>&#125;<br>demo(*dic)  <span class="hljs-comment"># 6</span><br><br><span class="hljs-type">Set</span> = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;<br>demo(*<span class="hljs-type">Set</span>)  <span class="hljs-comment"># 6</span><br><br>demo(*dic.values())  <span class="hljs-comment"># abc</span><br><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果函数实参是字典，可以在前面加两个星号进行解包，等价于关键参数</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>(<span class="hljs-params">a, b, c</span>):<br>    <span class="hljs-built_in">print</span>(a + b + c)<br><br><br>dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>&#125;<br>demo(**dic)  <span class="hljs-comment"># 6</span><br><br>demo(a=<span class="hljs-number">1</span>, b=<span class="hljs-number">2</span>, c=<span class="hljs-number">3</span>)  <span class="hljs-comment"># 6</span><br><br>demo(*dic.values())  <span class="hljs-comment"># 6</span><br><br></code></pre></td></tr></table></figure>
+
+<h4 id="（3）变量的作用域"><a href="#（3）变量的作用域" class="headerlink" title="（3）变量的作用域"></a><strong><font color="red">（3）变量的作用域</font></strong></h4><blockquote>
+<ul>
+<li><p>变量起作用的代码范围称为变量的作用域，不同作用域内变量名可以相同，互不影响。</p>
+</li>
+<li><p>在函数内部定义的普通变量只在函数内部起作用，称为局部变量。当函数执行结束后，局部变量自动删除，不再可以使用。</p>
+</li>
+<li><p>局部变量的引用比全局变量速度快，应优先考虑使用。</p>
+</li>
+<li><p>全局变量可以通过关键字global来定义。这分为两种情况：</p>
+</li>
+<li><p>一个变量已在函数外定义，如果在函数内需要为这个变量赋值，并要将这个赋值结果反映到函数外，可以在函数内使用global将其声明为全局变量。</p>
+</li>
+<li><p>如果一个变量在函数外没有定义，在函数内部也可以直接将一个变量定义为全局变量，该函数执行后，将增加一个新的全局变量。</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>():<br>    <span class="hljs-keyword">global</span> x<br>    x = <span class="hljs-number">3</span><br>    y = <span class="hljs-number">4</span><br>    <span class="hljs-built_in">print</span>(x, y)<br><br><br>x = <span class="hljs-number">5</span><br>demo()  <span class="hljs-comment"># 3 4</span><br><span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 3</span><br><span class="hljs-comment"># print(y) # NameError: name &#x27;y&#x27; is not defined</span><br><span class="hljs-keyword">del</span> x<br><span class="hljs-comment"># print(x)  #NameError: name &#x27;x&#x27; is not defined</span><br>demo()<br><span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 3 4</span><br><span class="hljs-built_in">print</span>(y)  <span class="hljs-comment"># NameError: name &#x27;y&#x27; is not defined</span><br><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果局部变量与全局变量具有相同的名字，那么该局部变量会在自己的作用域内隐藏同名的全局变量。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">demo</span>():<br>    x = <span class="hljs-number">3</span>  <span class="hljs-comment"># 创建了局部变量，并自动隐藏了同名的全局变量</span><br><br><br>x = <span class="hljs-number">5</span><br><span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 5</span><br>demo()<br><span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 5         # 函数执行不影响外面全局变量的值</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="（4）lamba表达式"><a href="#（4）lamba表达式" class="headerlink" title="（4）lamba表达式"></a><strong><font color="red">（4）lamba表达式</font></strong></h4><blockquote>
+<p>lambda表达式可以用来声明匿名函数，也就是没有函数名字的临时使用的小函数，尤其适合需要一个函数作为另一个函数参数的场合。也可以定义具名函数。</p>
+<p>lambda表达式只可以包含一个表达式，该表达式的计算结果可以看作是函数的返回值，不允许包含复合语句，但在表达式中可以调用其他函数</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">f = <span class="hljs-keyword">lambda</span> x, y, z: x + y + z  <span class="hljs-comment"># 可以给lambda表达式起名字</span><br><span class="hljs-built_in">print</span>(f(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))  <span class="hljs-comment"># 6 # 像函数一样调用</span><br>g = <span class="hljs-keyword">lambda</span> x, y=<span class="hljs-number">2</span>, z=<span class="hljs-number">3</span>: x + y + z  <span class="hljs-comment"># 参数默认值</span><br><span class="hljs-built_in">print</span>(g(<span class="hljs-number">1</span>))  <span class="hljs-comment"># 6</span><br><span class="hljs-built_in">print</span>(g(<span class="hljs-number">2</span>, z=<span class="hljs-number">4</span>, y=<span class="hljs-number">5</span>))  <span class="hljs-comment"># 11 # 关键参数</span><br>L = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-keyword">lambda</span> x: x + <span class="hljs-number">10</span>, L)))  <span class="hljs-comment"># [11, 12, 13, 14, 15]</span><br><span class="hljs-built_in">print</span>(L)  <span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="（5）生成器函数"><a href="#（5）生成器函数" class="headerlink" title="（5）生成器函数"></a><strong><font color="red">（5）生成器函数</font></strong></h4><blockquote>
+<ul>
+<li>包含yield语句的函数可以用来创建生成器对象，这样的函数也称生成器函数。</li>
+<li>yield语句与return语句的作用相似，都是用来从函数中返回值。与return语句不同的是，return语句一旦执行会立刻结束函数的运行，而每次执行到yield语句并返回一个值之后会暂停或挂起后面代码的执行，下次通过生成器对象的__next__()方法、内置函数next()、for循环遍历生成器对象元素或其他方式显式“索要”数据时恢复执行。</li>
+<li>生成器具有惰性求值的特点，占用内存少，适合大数据处理</li>
+</ul>
+</blockquote>
+<p><strong>案例3</strong> 编写并使用能够生成斐波那契数列的生成器函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>():<br>    a, b = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>  <span class="hljs-comment"># 序列解包，同时为多个元素赋值</span><br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        <span class="hljs-keyword">yield</span> a  <span class="hljs-comment"># 暂停执行，需要时再产生一个新元素</span><br>        a, b = b, a + b  <span class="hljs-comment"># 序列解包，继续生成新元素</span><br><br><br>a = f()  <span class="hljs-comment"># 创建生成器对象</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):  <span class="hljs-comment"># 斐波那契数列中前10个元素</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">next</span>(a), end=<span class="hljs-string">&#x27; &#x27;</span>)   <br><span class="hljs-comment"># 1 1 2 3 5 8 13 21 34 55 </span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>():<br>    a, b = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>  <span class="hljs-comment"># 序列解包，同时为多个元素赋值</span><br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        <span class="hljs-keyword">yield</span> a  <span class="hljs-comment"># 暂停执行，需要时再产生一个新元素</span><br>        a, b = b, a + b  <span class="hljs-comment"># 序列解包，继续生成新元素</span><br><br><br>a = f()  <span class="hljs-comment"># 创建生成器对象</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">next</span>(a))  <span class="hljs-comment"># 1 # 使用内置函数next()获取生成器对象中的元素</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">next</span>(a))  <span class="hljs-comment"># 1 #每次索取新元素时，由yield语句生成</span><br><span class="hljs-built_in">print</span>(a.__next__())  <span class="hljs-comment"># 2 # 也可以调用生成器对象的__next__()方法</span><br><span class="hljs-built_in">print</span>(a.__next__())  <span class="hljs-comment"># 3 # 也可以调用生成器对象的__next__()方法</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> f():  <span class="hljs-comment"># 斐波那契数列中第一个大于100的元素</span><br>    <span class="hljs-keyword">if</span> i &gt; <span class="hljs-number">100</span>:<br>        <span class="hljs-built_in">print</span>(i, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>        <span class="hljs-keyword">break</span><br><span class="hljs-comment"># 144</span><br></code></pre></td></tr></table></figure>
+
+<p><strong><font color="red">（6）实训任务</font></strong></p>
+<h5 id="1、实训任务1：编写函数，接收一个整数t为参数，打印杨辉三角前t行。"><a href="#1、实训任务1：编写函数，接收一个整数t为参数，打印杨辉三角前t行。" class="headerlink" title="1、实训任务1：编写函数，接收一个整数t为参数，打印杨辉三角前t行。"></a><strong><font color="blue">1、实训任务1：编写函数，接收一个整数t为参数，打印杨辉三角前t行。</font></strong></h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">打印结果如下<br>[<span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">15</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>]<br>[<span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">21</span>, <span class="hljs-number">35</span>, <span class="hljs-number">35</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
+
+<h5 id="2、实训任务2：编写函数，模拟二分法查找"><a href="#2、实训任务2：编写函数，模拟二分法查找" class="headerlink" title="2、实训任务2：编写函数，模拟二分法查找"></a><strong><font color="blue">2、实训任务2：编写函数，模拟二分法查找</font></strong></h5><h3 id="（五）面向对象与程序设计"><a href="#（五）面向对象与程序设计" class="headerlink" title="（五）面向对象与程序设计"></a>（五）面向对象与程序设计</h3><h4 id="（1）面向对象"><a href="#（1）面向对象" class="headerlink" title="（1）面向对象"></a><strong><font color="red">（1）面向对象</font></strong></h4><h5 id="1、面向对象"><a href="#1、面向对象" class="headerlink" title="1、面向对象"></a><strong><font color="blue">1、面向对象</font></strong></h5><h3 id="（六）字符串"><a href="#（六）字符串" class="headerlink" title="（六）字符串"></a>（六）字符串</h3><h4 id="（1）字符串"><a href="#（1）字符串" class="headerlink" title="（1）字符串"></a><strong><font color="red">（1）字符串</font></strong></h4><h5 id="1、字符串"><a href="#1、字符串" class="headerlink" title="1、字符串"></a><strong><font color="blue">1、字符串</font></strong></h5><h3 id="（七）正则表达式"><a href="#（七）正则表达式" class="headerlink" title="（七）正则表达式"></a>（七）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h5 id="1、正则表达式"><a href="#1、正则表达式" class="headerlink" title="1、正则表达式"></a><strong><font color="blue">1、正则表达式</font></strong></h5>
                 
               </div>
             
@@ -1118,7 +1225,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>April 6, 2023</div>
+          <div>April 19, 2023</div>
         </div>
       
       
