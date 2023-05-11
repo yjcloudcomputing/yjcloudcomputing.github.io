@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/img/python_2.png">
 <meta property="og:image" content="http://example.com/img/python_3.png">
 <meta property="article:published_time" content="2023-03-22T10:54:33.000Z">
-<meta property="article:modified_time" content="2023-05-11T00:54:51.976Z">
+<meta property="article:modified_time" content="2023-05-11T01:47:10.509Z">
 <meta property="article:author" content="YJ">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,7 +297,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          47k words
+          55k words
         
       </span>
     
@@ -308,7 +308,7 @@
         
         
         
-          390 mins
+          463 mins
         
       </span>
     
@@ -1376,7 +1376,276 @@
 <li>以设计好的类为基类，可以继承得到派生类，大幅度缩短开发周期，并且可以实现设计复用。在派生类中还可以对基类继承而来的某些行为进行重新实现，从而使得基类的某个同名方法在不同派生类中的行为有可能会不同，体现出一定的多态性。</li>
 <li>封装、继承、多态是面向对象程序设计的三个要素。</li>
 </ol>
-<h4 id="（1）面向对象"><a href="#（1）面向对象" class="headerlink" title="（1）面向对象"></a><strong><font color="red">（1）面向对象</font></strong></h4><h5 id="1、面向对象"><a href="#1、面向对象" class="headerlink" title="1、面向对象"></a><strong><font color="blue">1、面向对象</font></strong></h5><h3 id="（七）正则表达式"><a href="#（七）正则表达式" class="headerlink" title="（七）正则表达式"></a>（七）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 董付国 Python程序设计基础与应用第2版</p>
+<h4 id="（1）面向对象"><a href="#（1）面向对象" class="headerlink" title="（1）面向对象"></a><strong><font color="red">（1）面向对象</font></strong></h4><h5 id="1、面向对象"><a href="#1、面向对象" class="headerlink" title="1、面向对象"></a><strong><font color="blue">1、面向对象</font></strong></h5><h3 id="（七）正则表达式"><a href="#（七）正则表达式" class="headerlink" title="（七）正则表达式"></a>（七）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h5 id="1、正则表达式"><a href="#1、正则表达式" class="headerlink" title="1、正则表达式"></a><strong><font color="blue">1、正则表达式</font></strong></h5><ul>
+<li><p>正则表达式是字符串处理的有力工具，正则表达式使用预定义的模式去匹配一类具有共同特征的字符串，可以快速、准确地完成复杂的查找、替换等处理要求，比字符串自身提供的方法提供了更强大的处理功能。例如使用字符串对象的split()方法只能指定一个分隔符，而使用正则表达式可以很方便地指定多个符号作为分隔符；使用字符串对象的split()并指定分隔符时，很难处理分隔符连续多次出现的情况，而正则表达式让这一切都变成非常轻松。</p>
+</li>
+<li><p>正则表达式在文本编辑与处理、网页爬虫之类的场合中有重要应用。</p>
+</li>
+<li><p>正则表达式由元字符及其不同组合来构成，通过巧妙地构造正则表达式可以匹配任意字符串，并完成查找、替换、分隔等复杂的字符串处理任务</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>元字符</strong></th>
+<th><strong>功能说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.</td>
+<td>匹配除换行符以外的任意单个字符，单行模式下也可以表示换行符</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配位于*之前的字符或子模式的0次或多次重复</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配位于+之前的字符或子模式的1次或多次重复</td>
+</tr>
+<tr>
+<td>-</td>
+<td>在[]之内用来表示范围</td>
+</tr>
+<tr>
+<td>|</td>
+<td>匹配位于|之前或之后的字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>1）匹配行首，匹配以^后面的字符开头的字符串；  2）方括号内以^开头表示不匹配方括号中的字符</td>
+</tr>
+<tr>
+<td>$</td>
+<td></td>
+</tr>
+<tr>
+<td>?</td>
+<td>1）?前面的字符或子模式出现0次或1次；  2）当该字符紧随任何其他表示次数的限定符（*、+、?、{n}、{n,}、{n,m}）之后时，匹配模式是“非贪心的”。“非贪心的”模式匹配搜索到的、尽可能短的字符串，而默认的“贪心的”模式匹配搜索到的、尽可能长的字符串。例如，在字符串’oooo’中，’o+?’只匹配单个’o’，而’o+’匹配所有’o’</td>
+</tr>
+<tr>
+<td>\num</td>
+<td>此处的num是一个正整数，表示子模式编号。与转义字符\ooo冲突，需要使用原始字符串或\num的形式表示子模式。例如，r’(.)\1’匹配两个连续的相同字符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符匹配</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符匹配</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>元字符</strong></th>
+<th><strong>功能说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\r</td>
+<td>匹配一个回车符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词头或单词尾，与转义字符退格键\b冲突，需要使用原始字符串或\b</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>与\b含义相反</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配任何数字，相当于[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>与\d含义相反，等效于[^0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任何空白字符，包括空格、制表符、换页符，与 [  \f\n\r\t\v] 等效</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>与\s含义相反</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配任何字母、数字以及下划线，相当于[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>与\w含义相反\w含义相反，与[^A-Za-z0-9_]等效</td>
+</tr>
+<tr>
+<td>()</td>
+<td>将位于()内的内容作为一个整体来对待</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>{}前的字符或子模式重复至少m次、至多n次，{m}表示恰好m次，{m,}表示至少m次，{,n}表示至多n次，注意逗号前后不能有空格</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>表示范围，匹配位于[]中的任意一个字符，可以使用减号表示Unicode编码连续的字符范围</td>
+</tr>
+<tr>
+<td>[^xyz]</td>
+<td>反向字符集，匹配除x、y、z之外的任何字符</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>字符范围，匹配指定范围内的任何字符</td>
+</tr>
+<tr>
+<td>[^a-z]</td>
+<td>反向范围字符，匹配除小写英文字母之外的任何字符</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>如果以反斜线“\”开头的元字符与转义字符形式相同但含义不同，则需要使用两个反斜线“\”，或者使用原始字符串。</p>
+<p>在字符串前加上字符r或R之后表示原始字符串，字符串中任意字符都不再进行转义。原始字符串可以减少用户的输入，主要用于正则表达式和文件路径字符串的情况，但如果字符串以一个斜线“\”结束的话，则需要多写一个斜线，即以“\”结束。</p>
+</li>
+<li><p>正则表达式使用圆括号“()”表示一个子模式，圆括号内的内容作为一个整体对待，例如’(red)+’可以匹配’redred’、’redredred’等一个或多个重复’red’的情况。</p>
+</li>
+<li><p>使用子模式扩展语法可以实现更加复杂的字符串处理功能。</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(?P<groupname>)</td>
+<td>为子模式命名</td>
+</tr>
+<tr>
+<td>(?iLmsux)</td>
+<td>设置匹配标志，可以是几个字母的组合，每个字母含义与编译标志相同</td>
+</tr>
+<tr>
+<td>(?:…)</td>
+<td>匹配但不捕获该匹配的子模式内容</td>
+</tr>
+<tr>
+<td>(?P=groupname)</td>
+<td>表示在此之前的命名为groupname的子模式内容在当前位置又出现一次</td>
+</tr>
+<tr>
+<td>(?#…)</td>
+<td>表示注释</td>
+</tr>
+<tr>
+<td>(?&lt;=…)</td>
+<td>用于正则表达式之前，表示如果&lt;=后的内容在字符串中出现则匹配，但不返回&lt;=之后的内容</td>
+</tr>
+<tr>
+<td>(?=…)</td>
+<td>用于正则表达式之后，表示如果=后的内容在字符串中出现则匹配，但不返回=之后的内容</td>
+</tr>
+<tr>
+<td>(?&lt;!…)</td>
+<td>用于正则表达式之前，表示如果&lt;!后的内容在字符串中不出现则匹配，但不返回&lt;!之后的内容</td>
+</tr>
+<tr>
+<td>(?!…)</td>
+<td>用于正则表达式之后，表示如果!后的内容在字符串中不出现则匹配，但不返回!之后的内容</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>最简单的正则表达式是普通字符串，可以匹配自身</p>
+<ol>
+<li>‘[pjc]ython’可以匹配’python’、’jython’、’cython’</li>
+<li>‘[a-zA-Z0-9]’可以匹配一个任意大小写字母或数字</li>
+<li>[^abc] 可以一个匹配任意除’a’、’b’、’c’之外的字符</li>
+<li>‘python|perl’或’p(ython|erl)’都可以匹配’python’或’perl’</li>
+<li>子模式后面加上问号表示可选。r’(https://)?(www.)?python.org’只能匹配’<a target="_blank" rel="noopener" href="https://www.python.org&/#39;%E3%80%81&#39;https://python.org&#39;%E3%80%81&#39;www.python.org&#39;%E5%92%8C&#39;python.org&#39;">https://www.python.org&#39;、&#39;https://python.org&#39;、&#39;www.python.org&#39;和&#39;python.org&#39;</a></li>
+<li>‘^http’只能匹配所有以’http’开头的字符串</li>
+<li>‘(pattern)*’：允许模式重复0次或多次</li>
+<li>‘(pattern)+’：允许模式重复1次或多次</li>
+<li>‘(pattern){m,n}’：允许模式重复m~n次</li>
+<li>‘(a|b)*c’：匹配多个（包含0个）a或b，后面紧跟一个字母c。</li>
+<li>‘ab{1,}’：等价于’ab+’，匹配以字母a开头后面带1个至多个字母b的字符串。</li>
+<li>‘^[a-zA-Z]{1}([a-zA-Z0-9._]){4,19}$’：匹配长度为5-20的字符串，必须以字母开头并且可带字母、数字、下画线、圆点的字符串。</li>
+<li>‘^(\w){6,20}$’：匹配长度为6-20的字符串，可以包含字母、数字、下划线。</li>
+<li>‘^\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}$’：检查给定字符串是否为合法IP地址。</li>
+<li>‘^(13[4-9]\d{8})|(15[01289]\d{8})$’：检查给定字符串是否为移动手机号码。</li>
+<li>‘^[a-zA-Z]+$’：检查给定字符串是否只包含英文字母大小写。</li>
+<li>‘^\w+@(\w+.)+\w+$’：检查给定字符串是否为合法电子邮件地址。</li>
+<li>r’(\w)(?!.*\1)’：查找字符串中每个字符的最后一次出现。</li>
+<li>r’(\w)(?=.*\1)’：查找字符串中所有重复出现（出现次数大于1）的字符。</li>
+<li>‘^(-)?\d+(.\d{1,2})?$’：检查给定字符串是否为最多带有2位小数的正数或负数。</li>
+<li>‘[\u4e00-\u9fa5]’：匹配给定字符串中所有中文字符。</li>
+<li>‘^\d{18}|\d{15}$’：检查给定字符串是否为合法身份证格式。</li>
+<li>‘\d{4}-\d{1,2}-\d{1,2}’：匹配指定格式的日期，例如2021-1-31。</li>
+<li>‘^(?=.<em>[a-z])(?=.</em>[A-Z])(?=.<em>\d)(?=.</em>[,._]).{8,}$’：检查给定字符串是否为强密码，必须同时包含英语字母大写字母、英文小写字母、数字或特殊符号（如英文逗号、英文句号、下划线），并且长度必须至少8位。</li>
+<li>“(?!.*[&#39;&quot;/;=%?]).+”：如果给定字符串中包含’、”、/、;、=、%、?则匹配失败。</li>
+<li>‘(.)\1+’：匹配任意字符的两次或多次重复出现。</li>
+<li>‘((?P<f>\b\w+\b)\s+(?P=f))’：匹配连续出现两次的单词。</li>
+<li>‘((?P<f>.)(?P=f)(?P<g>.)(?P=g))’：匹配AABB形式的成语或字母组合</li>
+</ol>
+<h5 id="2、正则表达式模块re"><a href="#2、正则表达式模块re" class="headerlink" title="2、正则表达式模块re"></a><strong><font color="blue">2、正则表达式模块re</font></strong></h5><table>
+<thead>
+<tr>
+<th><strong>函数</strong></th>
+<th><strong>功能说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>findall(pattern, string[, flags])</td>
+<td>返回包含字符串中所有与给定模式匹配的项的列表，如果pattern中有子模式则只返回子模式匹配的内容</td>
+</tr>
+<tr>
+<td>match(pattern, string[, flags])</td>
+<td>从字符串的开始处匹配模式，返回Match对象或None</td>
+</tr>
+<tr>
+<td>search(pattern, string[, flags])</td>
+<td>在整个字符串中寻找模式，返回Match对象或None</td>
+</tr>
+<tr>
+<td>split(pattern, string[, maxsplit=0])</td>
+<td>根据模式匹配项分隔字符串</td>
+</tr>
+<tr>
+<td>sub(pat, repl, string[, count=0])</td>
+<td>将字符串中所有与pat匹配的项用repl替换，返回新字符串，repl可以是字符串或返回字符串的可调用对象，作用于每个匹配的Match对象</td>
+</tr>
+</tbody></table>
+<p>•其中函数参数“flags”的值可以是下面几个的不同组合（使用“|”进行组合）：</p>
+<p>re.I（注意是大写字母I，不是数字1，表示忽略大小写）</p>
+<p>re.L（支持本地字符集的字符）</p>
+<p>re.M（多行匹配模式）</p>
+<p>re.S（使元字符“.”匹配任意字符，包括换行符）</p>
+<p>re.U（匹配Unicode字符）</p>
+<p>re.X（忽略模式中的空格，并可以使用# 注释）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> re                            <span class="hljs-comment"># 导入re模块</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>text = <span class="hljs-string">&#x27;alpha. beta....gamma delta&#x27;</span>  <span class="hljs-comment"># 测试用的字符串</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.split(<span class="hljs-string">&#x27;[\. ]+&#x27;</span>, text)             <span class="hljs-comment"># 使用指定字符作为分隔符进行分隔（多选一，也就是.或者空格）</span><br>[<span class="hljs-string">&#x27;alpha&#x27;</span>, <span class="hljs-string">&#x27;beta&#x27;</span>, <span class="hljs-string">&#x27;gamma&#x27;</span>, <span class="hljs-string">&#x27;delta&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.split(<span class="hljs-string">&#x27;[\. ]+&#x27;</span>, text, maxsplit=<span class="hljs-number">2</span>) <span class="hljs-comment"># 最多分隔2次</span><br>[<span class="hljs-string">&#x27;alpha&#x27;</span>, <span class="hljs-string">&#x27;beta&#x27;</span>, <span class="hljs-string">&#x27;gamma delta&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.split(<span class="hljs-string">&#x27;[\. ]+&#x27;</span>, text, maxsplit=<span class="hljs-number">1</span>) <span class="hljs-comment"># 最多分隔1次</span><br>[<span class="hljs-string">&#x27;alpha&#x27;</span>, <span class="hljs-string">&#x27;beta....gamma delta&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>pat = <span class="hljs-string">&#x27;[a-zA-Z]+&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(pat, text)                <span class="hljs-comment"># 查找所有单词</span><br>[<span class="hljs-string">&#x27;alpha&#x27;</span>, <span class="hljs-string">&#x27;beta&#x27;</span>, <span class="hljs-string">&#x27;gamma&#x27;</span>, <span class="hljs-string">&#x27;delta&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>pat = <span class="hljs-string">&#x27;&#123;name&#125;&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>text = <span class="hljs-string">&#x27;Dear &#123;name&#125;...&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.sub(pat, <span class="hljs-string">&#x27;Mr.Dong&#x27;</span>, text)        <span class="hljs-comment"># 字符串替换</span><br><span class="hljs-string">&#x27;Dear Mr.Dong...&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">&#x27;a s d&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.sub(<span class="hljs-string">&#x27;a|s|d&#x27;</span>, <span class="hljs-string">&#x27;good&#x27;</span>, s)          <span class="hljs-comment"># 字符串替换</span><br><span class="hljs-string">&#x27;good good good&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">&quot;It&#x27;s a very good good idea&quot;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.sub(<span class="hljs-string">r&#x27;(\b\w+) \1&#x27;</span>, <span class="hljs-string">r&#x27;\1&#x27;</span>, s)     <span class="hljs-comment"># 处理连续的重复单词</span><br><span class="hljs-string">&quot;It&#x27;s a very good idea&quot;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.sub(<span class="hljs-string">r&#x27;((\w+) )\1&#x27;</span>, <span class="hljs-string">r&#x27;\2&#x27;</span>, s)<br><span class="hljs-string">&quot;It&#x27;s a very goodidea&quot;</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span>example = <span class="hljs-string">&#x27;Beautiful is better than ugly.&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\\bb.+?\\b&#x27;</span>, example)    <span class="hljs-comment"># 以字母b开头的完整单词</span><br>                                         <span class="hljs-comment"># 此处问号?表示非贪心模式</span><br>[<span class="hljs-string">&#x27;better&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\\bb.+\\b&#x27;</span>, example)     <span class="hljs-comment"># 贪心模式的匹配结果</span><br>[<span class="hljs-string">&#x27;better than ugly&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\\bb\w*\\b&#x27;</span>, example)<br>[<span class="hljs-string">&#x27;better&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\\Bh.+?\\b&#x27;</span>, example)    <span class="hljs-comment"># 不以h开头且含有h字母的单词剩余部分</span><br>[<span class="hljs-string">&#x27;han&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\\b\w.+?\\b&#x27;</span>, example)           <span class="hljs-comment"># 所有单词</span><br>[<span class="hljs-string">&#x27;Beautiful&#x27;</span>, <span class="hljs-string">&#x27;is&#x27;</span>, <span class="hljs-string">&#x27;better&#x27;</span>, <span class="hljs-string">&#x27;than&#x27;</span>, <span class="hljs-string">&#x27;ugly&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\w+&#x27;</span>, example)                   <span class="hljs-comment"># 所有单词</span><br>[<span class="hljs-string">&#x27;Beautiful&#x27;</span>, <span class="hljs-string">&#x27;is&#x27;</span>, <span class="hljs-string">&#x27;better&#x27;</span>, <span class="hljs-string">&#x27;than&#x27;</span>, <span class="hljs-string">&#x27;ugly&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">r&#x27;\b\w.+?\b&#x27;</span>, example)            <span class="hljs-comment"># 使用原始字符串</span><br>[<span class="hljs-string">&#x27;Beautiful&#x27;</span>, <span class="hljs-string">&#x27;is&#x27;</span>, <span class="hljs-string">&#x27;better&#x27;</span>, <span class="hljs-string">&#x27;than&#x27;</span>, <span class="hljs-string">&#x27;ugly&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.split(<span class="hljs-string">&#x27;\s&#x27;</span>, example)                      <span class="hljs-comment"># 使用任何空白字符分隔字符串</span><br>[<span class="hljs-string">&#x27;Beautiful&#x27;</span>, <span class="hljs-string">&#x27;is&#x27;</span>, <span class="hljs-string">&#x27;better&#x27;</span>, <span class="hljs-string">&#x27;than&#x27;</span>, <span class="hljs-string">&#x27;ugly.&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\d+\.\d+\.\d+&#x27;</span>, <span class="hljs-string">&#x27;Python 2.7.13&#x27;</span>) <span class="hljs-comment"># 查找并返回x.x.x形式的数字</span><br>[<span class="hljs-string">&#x27;2.7.13&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">&#x27;\d+\.\d+\.\d+&#x27;</span>, <span class="hljs-string">&#x27;Python 2.7.13,Python 3.8.9&#x27;</span>)<br>[<span class="hljs-string">&#x27;2.7.13&#x27;</span>, <span class="hljs-string">&#x27;3.8.9&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">&#x27;&lt;html&gt;&lt;head&gt;This is head.&lt;/head&gt;&lt;body&gt;This is body.&lt;/body&gt;&lt;/html&gt;&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>pattern = <span class="hljs-string">r&#x27;&lt;html&gt;&lt;head&gt;(.+)&lt;/head&gt;&lt;body&gt;(.+)&lt;/body&gt;&lt;/html&gt;&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>result = re.search(pattern, s)<br><span class="hljs-meta">&gt;&gt;&gt; </span>result.group(<span class="hljs-number">1</span>)                              <span class="hljs-comment"># 第一个子模式</span><br><span class="hljs-string">&#x27;This is head.&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>result.group(<span class="hljs-number">2</span>)                              <span class="hljs-comment"># 第二个子模式</span><br><span class="hljs-string">&#x27;This is body.&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(pattern, s)<br>[(<span class="hljs-string">&#x27;This is head.&#x27;</span>, <span class="hljs-string">&#x27;This is body.&#x27;</span>)]<br><br><br></code></pre></td></tr></table></figure>
+
+<p><strong><font color="blue">3、正则表达式模块re的match对象</font></strong></p>
+<blockquote>
+<p>正则表达式模块re的函数match()、search()以及正则表达式对象的方法match()、search()方法匹配成功后返回Match对象。Match对象的主要方法有：</p>
+<p>group()：返回匹配的一个或多个子模式内容</p>
+<p>groups()：返回一个包含匹配的所有子模式内容的元组</p>
+<p>groupdict()：返回包含匹配的所有命名子模式内容的字典</p>
+<p>start()：返回指定子模式内容的起始位置</p>
+<p>end()：返回指定子模式内容的结束位置的后一个位置</p>
+<p>span()：返回一个包含指定子模式内容起始位置和结束位置后一个位置的元组。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>m = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&#x27;(\w+) (\w+)&#x27;</span>, <span class="hljs-string">&#x27;Isaac Newton, physicist&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>m<br>&lt;re.Match <span class="hljs-built_in">object</span>; span=(<span class="hljs-number">0</span>, <span class="hljs-number">12</span>), <span class="hljs-keyword">match</span>=<span class="hljs-string">&#x27;Isaac Newton&#x27;</span>&gt;<br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-number">0</span>)                   <span class="hljs-comment"># 返回整个模式内容</span><br><span class="hljs-string">&#x27;Isaac Newton&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-number">1</span>)                   <span class="hljs-comment"># 返回第1个子模式内容</span><br><span class="hljs-string">&#x27;Isaac&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-number">2</span>)                   <span class="hljs-comment"># 返回第2个子模式内容.</span><br><span class="hljs-string">&#x27;Newton&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)                <span class="hljs-comment"># 返回指定的多个子模式内容</span><br>(<span class="hljs-string">&#x27;Isaac&#x27;</span>, <span class="hljs-string">&#x27;Newton&#x27;</span>)<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>m = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&#x27;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&#x27;</span>, <span class="hljs-string">&#x27;Malcolm Reynolds&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-string">&#x27;first_name&#x27;</span>)      <span class="hljs-comment"># 使用命名的子模式</span><br><span class="hljs-string">&#x27;Malcolm&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>m.group(<span class="hljs-string">&#x27;last_name&#x27;</span>)<br><span class="hljs-string">&#x27;Reynolds&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>m = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&#x27;(\d+)\.(\d+)&#x27;</span>, <span class="hljs-string">&#x27;24.1632&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>m.groups()                 <span class="hljs-comment"># 返回所有匹配的子模式（不包括第0个）</span><br>(<span class="hljs-string">&#x27;24&#x27;</span>, <span class="hljs-string">&#x27;1632&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>m = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&#x27;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&#x27;</span>, <span class="hljs-string">&#x27;Malcolm Reynolds&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>m.groupdict()              <span class="hljs-comment"># 以字典形式返回匹配的结果</span><br>&#123;<span class="hljs-string">&#x27;first_name&#x27;</span>: <span class="hljs-string">&#x27;Malcolm&#x27;</span>, <span class="hljs-string">&#x27;last_name&#x27;</span>: <span class="hljs-string">&#x27;Reynolds&#x27;</span>&#125;<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">&#x27;aabc abcd abbcd abccd abcdd&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>re.findall(<span class="hljs-string">r&#x27;(\b\w*(?P&lt;f&gt;\w+)(?P=f)\w*\b)&#x27;</span>, s)<br>[(<span class="hljs-string">&#x27;aabc&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>), (<span class="hljs-string">&#x27;abbcd&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>), (<span class="hljs-string">&#x27;abccd&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>), (<span class="hljs-string">&#x27;abcdd&#x27;</span>, <span class="hljs-string">&#x27;d&#x27;</span>)]<br><br><br></code></pre></td></tr></table></figure>
+
+<h5 id="3、实训任务-牛客网对应正则表达式题目"><a href="#3、实训任务-牛客网对应正则表达式题目" class="headerlink" title="3、实训任务:牛客网对应正则表达式题目"></a><strong><font color="blue">3、实训任务:牛客网对应正则表达式题目</font></strong></h5><h6 id="NP101"><a href="#NP101" class="headerlink" title="NP101"></a>NP101</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><span class="hljs-built_in">str</span>=<span class="hljs-built_in">input</span>()<br><span class="hljs-built_in">print</span>(re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&#x27;https://www&#x27;</span>,<span class="hljs-built_in">str</span>).span())<br></code></pre></td></tr></table></figure>
+
+<h6 id="NP102"><a href="#NP102" class="headerlink" title="NP102"></a>NP102</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><span class="hljs-built_in">str</span>=<span class="hljs-built_in">input</span>()<br><span class="hljs-comment"># pattern=re.compile(r&#x27;[a-zA-Z]&#x27;)</span><br><span class="hljs-comment"># num=pattern.sub(&quot;&quot;,str)</span><br>pattern1=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;\D&#x27;</span>)<br>num=pattern1.sub(<span class="hljs-string">&quot;&quot;</span>,<span class="hljs-built_in">str</span>)<br><span class="hljs-built_in">print</span>(num)<br></code></pre></td></tr></table></figure>
+
+<h6 id="NP103"><a href="#NP103" class="headerlink" title="NP103"></a>NP103</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><span class="hljs-built_in">str</span>=<span class="hljs-built_in">input</span>()<br><span class="hljs-comment"># pattern=re.compile(r&#x27;[a-zA-Z]&#x27;)</span><br><span class="hljs-comment"># num=pattern.sub(&quot;&quot;,str)</span><br>pattern1=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;#.*$&#x27;</span>)<br>num=pattern1.sub(<span class="hljs-string">&quot;&quot;</span>,<span class="hljs-built_in">str</span>)<br><span class="hljs-built_in">print</span>(num)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 董付国 Python程序设计基础与应用第2版</p>
 <p>[2] 林子雨 Python程序设计基础教程</p>
 <p>[3] 牛客网</p>
 
