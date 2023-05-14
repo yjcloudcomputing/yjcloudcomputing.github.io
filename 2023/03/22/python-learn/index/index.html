@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/img/python_2.png">
 <meta property="og:image" content="http://example.com/img/python_3.png">
 <meta property="article:published_time" content="2023-03-22T10:54:33.000Z">
-<meta property="article:modified_time" content="2023-05-11T01:47:10.509Z">
+<meta property="article:modified_time" content="2023-05-14T02:50:45.546Z">
 <meta property="article:author" content="YJ">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,7 +297,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          55k words
+          56k words
         
       </span>
     
@@ -359,7 +359,7 @@
               <p class="note note-info">
                 
                   
-                    Last updated on May 11, 2023 am
+                    Last updated on May 14, 2023 am
                   
                 
               </p>
@@ -1369,14 +1369,7 @@
 
 <h5 id="12、字符串切片"><a href="#12、字符串切片" class="headerlink" title="12、字符串切片"></a><strong><font color="blue">12、字符串切片</font></strong></h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python">切片也适用于字符串，但仅限于读取其中的元素，不支持字符串修改。<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Explicit is better than implicit.&#x27;</span>[:<span class="hljs-number">8</span>]<br><span class="hljs-string">&#x27;Explicit&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Explicit is better than implicit.&#x27;</span>[<span class="hljs-number">9</span>:<span class="hljs-number">23</span>]<br><span class="hljs-string">&#x27;is better than&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>path = <span class="hljs-string">&#x27;C:\\Python38\\test.bmp&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>path[:-<span class="hljs-number">4</span>] + <span class="hljs-string">&#x27;_new&#x27;</span> + path[-<span class="hljs-number">4</span>:]<br><span class="hljs-string">&#x27;C:\\Python38\\test_new.bmp&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> os.path <span class="hljs-keyword">import</span> splitext<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;_new&#x27;</span>.join(splitext(path))<br><span class="hljs-string">&#x27;C:\\Python38\\test_new.bmp&#x27;</span><br><br></code></pre></td></tr></table></figure>
 
-
-
-<h3 id="（六）面向对象与程序设计"><a href="#（六）面向对象与程序设计" class="headerlink" title="（六）面向对象与程序设计"></a>（六）面向对象与程序设计</h3><ol>
-<li>在面向对象程序设计（Object Oriented Programming）中，把数据以及对数据的操作封装在一起，组成一个整体（对象），不同对象之间通过消息机制来通信或者同步。对于相同类型的对象进行分类、抽象后，得出共同的特征而形成了类。创建类时用变量形式表示对象特征的成员称为数据成员，用函数形式表示对象行为的成员称为成员方法，数据成员和成员方法统称为类的成员。</li>
-<li>以设计好的类为基类，可以继承得到派生类，大幅度缩短开发周期，并且可以实现设计复用。在派生类中还可以对基类继承而来的某些行为进行重新实现，从而使得基类的某个同名方法在不同派生类中的行为有可能会不同，体现出一定的多态性。</li>
-<li>封装、继承、多态是面向对象程序设计的三个要素。</li>
-</ol>
-<h4 id="（1）面向对象"><a href="#（1）面向对象" class="headerlink" title="（1）面向对象"></a><strong><font color="red">（1）面向对象</font></strong></h4><h5 id="1、面向对象"><a href="#1、面向对象" class="headerlink" title="1、面向对象"></a><strong><font color="blue">1、面向对象</font></strong></h5><h3 id="（七）正则表达式"><a href="#（七）正则表达式" class="headerlink" title="（七）正则表达式"></a>（七）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h5 id="1、正则表达式"><a href="#1、正则表达式" class="headerlink" title="1、正则表达式"></a><strong><font color="blue">1、正则表达式</font></strong></h5><ul>
+<h3 id="（六）正则表达式"><a href="#（六）正则表达式" class="headerlink" title="（六）正则表达式"></a>（六）正则表达式</h3><h4 id="（1）正则表达式"><a href="#（1）正则表达式" class="headerlink" title="（1）正则表达式"></a><strong><font color="red">（1）正则表达式</font></strong></h4><h5 id="1、正则表达式"><a href="#1、正则表达式" class="headerlink" title="1、正则表达式"></a><strong><font color="blue">1、正则表达式</font></strong></h5><ul>
 <li><p>正则表达式是字符串处理的有力工具，正则表达式使用预定义的模式去匹配一类具有共同特征的字符串，可以快速、准确地完成复杂的查找、替换等处理要求，比字符串自身提供的方法提供了更强大的处理功能。例如使用字符串对象的split()方法只能指定一个分隔符，而使用正则表达式可以很方便地指定多个符号作为分隔符；使用字符串对象的split()并指定分隔符时，很难处理分隔符连续多次出现的情况，而正则表达式让这一切都变成非常轻松。</p>
 </li>
 <li><p>正则表达式在文本编辑与处理、网页爬虫之类的场合中有重要应用。</p>
@@ -1643,9 +1636,13 @@
 
 <h6 id="NP103"><a href="#NP103" class="headerlink" title="NP103"></a>NP103</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><span class="hljs-built_in">str</span>=<span class="hljs-built_in">input</span>()<br><span class="hljs-comment"># pattern=re.compile(r&#x27;[a-zA-Z]&#x27;)</span><br><span class="hljs-comment"># num=pattern.sub(&quot;&quot;,str)</span><br>pattern1=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&#x27;#.*$&#x27;</span>)<br>num=pattern1.sub(<span class="hljs-string">&quot;&quot;</span>,<span class="hljs-built_in">str</span>)<br><span class="hljs-built_in">print</span>(num)<br></code></pre></td></tr></table></figure>
 
-
-
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 董付国 Python程序设计基础与应用第2版</p>
+<h3 id="（七）面向对象与程序设计"><a href="#（七）面向对象与程序设计" class="headerlink" title="（七）面向对象与程序设计"></a>（七）面向对象与程序设计</h3><ol>
+<li>在面向对象程序设计（Object Oriented Programming）中，把数据以及对数据的操作封装在一起，组成一个整体（对象），不同对象之间通过消息机制来通信或者同步。对于相同类型的对象进行分类、抽象后，得出共同的特征而形成了类。创建类时用变量形式表示对象特征的成员称为数据成员，用函数形式表示对象行为的成员称为成员方法，数据成员和成员方法统称为类的成员。</li>
+<li>以设计好的类为基类，可以继承得到派生类，大幅度缩短开发周期，并且可以实现设计复用。在派生类中还可以对基类继承而来的某些行为进行重新实现，从而使得基类的某个同名方法在不同派生类中的行为有可能会不同，体现出一定的多态性。</li>
+<li>封装、继承、多态是面向对象程序设计的三个要素。</li>
+</ol>
+<h4 id="（1）类的定义与使用"><a href="#（1）类的定义与使用" class="headerlink" title="（1）类的定义与使用"></a><strong><font color="red">（1）类的定义与使用</font></strong></h4><h5 id="1、类"><a href="#1、类" class="headerlink" title="1、类"></a><strong><font color="blue">1、类</font></strong></h5><h4 id="（2）数据成员与成员方法"><a href="#（2）数据成员与成员方法" class="headerlink" title="（2）数据成员与成员方法"></a><strong><font color="red">（2）数据成员与成员方法</font></strong></h4><p><strong><font color="blue">1、私有成员与公有成员</font></strong></p>
+<h5 id="2、数据成员"><a href="#2、数据成员" class="headerlink" title="2、数据成员"></a><strong><font color="blue">2、数据成员</font></strong></h5><h5 id="3、成员方法"><a href="#3、成员方法" class="headerlink" title="3、成员方法"></a><strong><font color="blue">3、成员方法</font></strong></h5><h5 id="4、属性"><a href="#4、属性" class="headerlink" title="4、属性"></a><strong><font color="blue">4、属性</font></strong></h5><h4 id="（3）继承"><a href="#（3）继承" class="headerlink" title="（3）继承"></a><strong><font color="red">（3）继承</font></strong></h4><h4 id="（4）特殊方法"><a href="#（4）特殊方法" class="headerlink" title="（4）特殊方法"></a><strong><font color="red">（4）特殊方法</font></strong></h4><h4 id="（5）综合案例"><a href="#（5）综合案例" class="headerlink" title="（5）综合案例"></a><strong><font color="red">（5）综合案例</font></strong></h4><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 董付国 Python程序设计基础与应用第2版</p>
 <p>[2] 林子雨 Python程序设计基础教程</p>
 <p>[3] 牛客网</p>
 
@@ -1712,7 +1709,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>May 11, 2023</div>
+          <div>May 14, 2023</div>
         </div>
       
       
